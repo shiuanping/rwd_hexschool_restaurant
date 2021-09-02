@@ -1,0 +1,55 @@
+.form-content{
+    display: flex;
+    @include phone(){
+        flex-direction: column;
+    }
+}
+.register{
+    margin-bottom: $space-l;
+    @include phone(){
+        width: 90%;
+        margin: 0 auto $space-m auto;
+    }
+    h2{
+        margin: 0 auto $space-s auto;
+    }
+    .sub-title{
+        text-align: center;
+        margin-bottom: $space-m;
+    }
+    form, .terms{
+        width: 50%;
+        @include phone(){
+            width: 100%;
+        }
+    }
+    .password{
+        margin-bottom: 0.75rem;
+    }
+    .register-btn{
+        font-size: $fz-s;
+        background: $secondary;
+        margin-left: auto;
+    }
+    .register-btn:hover{
+        background: $secondary-dark;
+    }
+}
+.register .form{
+    max-width: 620px;
+    h4{
+        color: $primary;
+        font-size: $fz-m;
+        font-weight: bold;
+    }
+}
+.password-check{
+    i{
+        top: 0.625rem;
+    }
+}
+.terms{
+    @include phone(){
+        margin-bottom: $space-m;
+    }
+}

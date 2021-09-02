@@ -1,0 +1,190 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.container{
+    max-width: 1049px;
+    margin: 0 auto;
+    background: $background;
+    position: relative;
+}
+.header{
+    width: 100%;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 $space-s;
+    position: absolute;
+    top: 0;
+}
+.logo{
+    width: 120px;
+    height: 24px;
+    display: block;
+    background-image: url('https://120061203.github.io/rwdFinalTest/img/logo_w.svg');
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.menu{
+    display: flex;
+    @include phone(){
+        width: 100%;
+        height: 0;
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        background: rgba(0,0,0,0.75);
+        transition: all 0.6s ease 0s;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        &.active{
+            height: 195px;
+        }
+    }
+    a{
+        color: $white;
+        display: block;
+        padding: $space-s;
+        @include phone(){
+            background: rgba(0,0,0,0.75);
+        }
+    }
+    a:hover{
+        background: rgba(80,80,80,0.75);
+    }
+}
+.burger{
+    display: none;
+    color: $white;
+    font-size: $fz-l;
+    padding: $space-s;
+    @include phone(){
+        display: block;
+    }
+}
+.banner{
+    height: 420px;
+    background-image: url('https://hexschool.github.io/Rwd_sketch_export/assets/header_desktop@2x.png?1630562080117');
+    background-size: cover;
+    background-position: center center;
+    margin-bottom: $space-l;
+    @include phone(){
+        background-image: url('https://hexschool.github.io/Rwd_sketch_export/assets/header_mobile.png');
+    }
+}
+.slogan{
+    color: $white;
+    font-size: $fz-s;
+    text-align: center;
+    background: $gray;
+    padding: $space-m $space-l;
+    @include phone(){
+        width: 90%;
+        padding: $space-m 0;
+    }
+    h2{
+        font-size: 2.25rem;
+        margin-bottom: $space-s;
+        @include phone(){
+            font-size: $fz-l;
+        }
+    }
+    h2:not(.slogan-title-mobile){
+        @include phone(){
+            display: none;
+        }
+    }
+    &-title-mobile{
+        display: none;
+        @include phone(){
+            display: block;
+        }
+    }
+}
+.section{
+    margin-bottom: $space-l;
+    .title{
+        text-align: center;
+    }
+}
+
+.footer{
+    padding: 0 $space-l $space-l $space-l;
+    display: flex;
+    justify-content: space-evenly;
+    @include pad(){
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0.62rem;
+    }
+    .title{
+        margin-bottom: $space-s;
+    }
+    p, ul{
+        margin-bottom: $space-m;
+    }
+}
+.about, .contact, .media{
+    width: 30%;
+    @include pad(){
+        width: 100%;
+    }
+}
+.contact{
+    ul{
+        color: $primary;
+        list-style: disc;
+        margin-left: $space-s;
+    }
+    a{
+        color: $primary;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    
+}
+.media{
+    text-align: right;
+    ul{
+        display: flex;
+        justify-content: flex-end;
+        a:hover{
+            opacity: 0.7;
+        }
+    }
+    li{
+        margin-left: 0.68rem;
+    }
+    a{
+        font-size: 2.25rem;
+    }
+}
+.google{
+    color: #DB4437;
+}
+.twitter{
+    color: #41ABE1;
+}
+.facebook{
+    color: #3A5795;
+}
+.logo-bg{
+    width: 243px;
+    height: 48px;
+    display: block;
+    margin-left: auto;
+    margin-bottom: $space-s;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-image: url('https://hexschool.github.io/Rwd_sketch_export/assets/logo_l@svg.svg');
+}

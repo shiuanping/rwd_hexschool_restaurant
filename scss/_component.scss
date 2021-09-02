@@ -1,0 +1,88 @@
+.title{
+    color: $primary;
+    font-size: $fz-l;
+    @include phone(){
+        font-size: 1.25rem;
+    }
+}
+
+.sub-title{
+    color: $primary;
+    font-size: $space-s;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn{
+    color: $white;
+    display: block;
+    text-align: center;
+    border: 0;
+    outline: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.inputBox{
+    color: #4A4A4A;
+    border-radius: 0.2rem;
+    border: 1px solid #CCC;
+}
+.form{
+    border-top: 3px solid $secondary;
+    padding: 1rem;
+    margin: 0 auto;
+    box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+    h3{
+        font-size: $fz-m;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    div{
+        position: relative;
+    }
+    .email{
+        margin-bottom: 1rem;
+    }
+    label{
+        color: $primary;
+        font-size: 1rem;
+    }
+    .email input,.password input, .password-check input{
+        width: 100%;
+        padding: 0.625rem 0.625rem 0.625rem 2.5rem;      
+    }
+    i{
+        font-size: 1rem;
+        position: absolute;
+        top: 2.2rem;
+        left: 0.75rem;
+    }
+    .btn{
+        width: 46%;
+        line-height: 2;
+    }
+    a:not(.btn){
+        color: $secondary;
+        font-size: 0.875rem;
+        margin-bottom: $space-m;
+    }
+    a:not(.btn):hover{
+        text-decoration: underline;
+    }
+}

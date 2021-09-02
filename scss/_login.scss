@@ -1,0 +1,33 @@
+.login{
+    margin-bottom: $space-l;
+    h2{
+        margin: 0 auto $space-s auto;
+    }
+    .sub-title{
+        text-align: center;
+        margin-bottom: $space-m;
+    }
+}
+.login .form{
+    width: 300px;
+    label{
+        margin-top: 1rem;
+    }
+}
+.login-btn-wrapper{
+    a{
+        color: $white;
+    }
+}
+.register-btn{
+    background: $gray;
+}
+.register-btn:hover{
+    background: $gray-dark;
+}
+.login-btn{
+    background: $secondary;
+}
+.login-btn:hover{
+    background: $secondary-dark;
+}
